@@ -1,0 +1,1040 @@
+/* =====================================================
+   FIUZA ENGENHARIA & ENERGIA
+===================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Michroma&family=Montserrat:wght@400;500;600;700;800;900&display=swap');
+
+:root {
+    --navy:
+    linear-gradient(
+            90deg,
+            #08003c,
+            #00111e
+        );
+    --navy-escuro: 
+    linear-gradient(
+            360deg,
+            #08003c,
+            #00111e
+        );
+    --navy-dark: #00111F;
+    --navy-medium: #09003c;
+
+    --yellow: #FFBD17;
+    --yellow-light: #FFC928;
+
+    --white: #FFFFFF;
+    --off-white: #F6F7F8;
+
+    --gray: #687481;
+    --gray-light: #DDE2E6;
+
+    --green: #19B85A;
+
+    --max-width: 1450px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Montserrat", Arial, sans-serif;
+    color: #050027;
+    background: white;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+}
+
+.container {
+    width: min(92%, var(--max-width));
+    margin: auto;
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.header {
+    height: 95px;
+    background:
+        linear-gradient(
+            90deg,
+            #08003c,
+            #00111e
+        );
+
+    color: white;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 100;
+}
+
+.nav {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.logo img {
+    width: 200px;
+    max-height: 200px;
+    object-fit: contain;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 42px;
+}
+
+.menu a {
+    position: relative;
+    font-size: 14px;
+    transition: .25s;
+}
+
+.menu a:hover,
+.menu a.active {
+    color: var(--yellow);
+}
+
+.menu a.active::after {
+    content: "";
+    position: absolute;
+    height: 4px;
+    width: 35px;
+    background: var(--yellow);
+    left: 0;
+    bottom: -17px;
+    border-radius: 5px;
+}
+
+
+/* =====================================================
+   BOTÕES
+===================================================== */
+
+.btn {
+    min-height: 53px;
+    padding: 0 30px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-weight: 800;
+    font-size: 14px;
+    border-radius: 8px;
+    transition: .25s;
+}
+
+.btn-primary,
+.btn-header {
+    background: var(--yellow);
+    color: #111;
+}
+
+.btn-primary:hover,
+.btn-header:hover {
+    background: var(--yellow-light);
+    transform: translateY(-2px);
+}
+
+.btn-outline {
+    border: 2px solid var(--yellow);
+    color: white;
+    min-width: 210px;
+}
+
+.btn-outline:hover {
+    background: var(--yellow);
+    color: #111;
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero {
+    min-height: 550px;
+    display: grid;
+    grid-template-columns: 54% 46%;
+    background:
+        radial-gradient(
+            circle at 30% 30%,
+            #08003c 0,
+            #00111e 45%,
+            #00111e 100%
+        );
+    color: white;
+}
+
+.hero-left {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.hero-content {
+    width: min(88%, 760px);
+    padding: 55px 30px 30px 0;
+}
+
+.eyebrow {
+    letter-spacing: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    display: flex;
+    flex-direction: column;
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: clamp(32px, 3.2vw, 47px);
+
+    line-height: 1.05;
+
+    color: var(--yellow);
+
+    font-weight: 800;
+}
+
+.hero h1 span {
+    font-family: "Michroma", sans-serif;
+
+    font-size: clamp(65px, 6vw, 100px);
+
+    font-weight: 400;
+
+    color: #ffffff;
+
+    letter-spacing: 2px;
+
+    line-height: 1;
+
+    margin-bottom: 18px;
+}
+
+.hero-description {
+    max-width: 650px;
+    margin-top: 25px;
+    font-size: 21px;
+    line-height: 1.45;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 18px;
+    margin-top: 30px;
+}
+
+.hero-benefits {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.benefit {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 0 25px;
+    border-right: 1px solid rgba(255,255,255,.35);
+}
+
+.benefit:first-child {
+    padding-left: 0;
+}
+
+.benefit:last-child {
+    border: 0;
+}
+
+.benefit-icon {
+    color: var(--yellow);
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.benefit strong,
+.benefit span {
+    display: block;
+    font-size: 12px;
+}
+
+.hero-image {
+    position: relative;
+
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(0, 20, 35, 0.05),
+            rgba(0, 20, 35, 0.12)
+        ),
+        url("./imagens/eletricista.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    overflow: hidden;
+}
+
+.hero-image::before {
+    content: "";
+    position: absolute;
+    left: 35px;
+    top: -100px;
+    width: 125px;
+    height: 850px;
+    background: var(--yellow);
+    transform: rotate(-27deg);
+}
+
+.hero-image::after {
+    content: "";
+    position: absolute;
+    left: 58px;
+    top: -100px;
+    width: 95px;
+    height: 850px;
+    background: var(--navy);
+    transform: rotate(-27deg);
+}
+
+.hero-blue-shape {
+    position: absolute;
+
+    left: -45px;
+    bottom: -145px;
+
+    width: 200px;
+    height: 520px;
+
+    background: var(--navy-escuro);
+
+    transform: rotate(-27deg);
+
+    pointer-events: none;
+}
+
+.hero-message {
+    position: absolute;
+    right: 40px;
+    bottom: 85px;
+    text-align: right;
+    font-family: cursive;
+    font-style: italic;
+    font-size: 36px;
+    line-height: 1;
+    transform: rotate(-7deg);
+}
+
+
+/* =====================================================
+   SERVICES
+===================================================== */
+
+.section {
+    padding: 45px 0 35px;
+}
+
+.section-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 28px;
+}
+
+.section-label {
+    color: #5d6874;
+    font-size: 12px;
+    letter-spacing: 5px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 12px;
+}
+
+.section-label span {
+    width: 43px;
+    height: 4px;
+    background: var(--yellow);
+}
+
+.section-top h2 {
+    font-size: 31px;
+    font-weight: 400;
+}
+
+.section-top h2 strong {
+    font-weight: 900;
+}
+
+.section-description {
+    border-left: 1px solid #a5adb5;
+    padding-left: 20px;
+    color: #71808d;
+    line-height: 1.5;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+}
+
+.service-card {
+    min-height: 205px;
+    background:
+        linear-gradient(
+            145deg,
+            #08003c,
+            #00111e
+        );
+
+    color: white;
+    border-radius: 5px;
+    padding: 20px 28px 24px;
+    transition: .25s;
+    box-shadow: 0 3px 8px rgba(0,0,0,.15);
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 22px rgba(0,0,0,.2);
+}
+
+.service-icon {
+    height: 64px;
+    color: var(--yellow);
+    font-size: 49px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.service-card h3 {
+    font-size: 14px;
+    margin: 7px 0 10px;
+}
+
+.service-card p {
+    font-size: 13px;
+    line-height: 1.5;
+    color: #e3e7ea;
+}
+
+
+/* =====================================================
+   WHY FIUZA
+===================================================== */
+
+.why {
+    min-height: 240px;
+    display: grid;
+    grid-template-columns: 25% 75%;
+    color: white;
+
+    background:
+        linear-gradient(
+            90deg,
+            #08003c,
+            #00111e
+        );
+}
+
+.why-image {
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(0, 19, 34, 0.05),
+            rgba(0, 19, 34, 0.75)
+        ),
+        url("./imagens/energia.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.why-content {
+    display: grid;
+    grid-template-columns: 43% 57%;
+    align-items: center;
+    padding: 35px 6% 35px 35px;
+}
+
+.section-label.light {
+    color: white;
+}
+
+.why-text h2 {
+    font-size: 24px;
+    margin: 10px 0 15px;
+}
+
+.why-text > p:last-child {
+    max-width: 450px;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.why-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    border-left: 1px solid rgba(255,255,255,.25);
+}
+
+.why-item {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    min-height: 85px;
+    padding: 10px 30px;
+}
+
+.why-icon {
+    font-size: 36px;
+    color: var(--yellow);
+}
+
+.why-item strong,
+.why-item span {
+    display: block;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+
+/* =====================================================
+   CONTACT
+===================================================== */
+
+.contact {
+    padding: 38px 0;
+    background:
+        linear-gradient(
+            110deg,
+            #fff 0%,
+            #fff 68%,
+            #f1f3f4 68%,
+            #fff 100%
+        );
+}
+
+.contact-content {
+    display: grid;
+    grid-template-columns: 1.3fr .9fr auto;
+    align-items: center;
+    gap: 50px;
+}
+
+.contact-title h2 {
+    font-size: 37px;
+    font-weight: 900;
+}
+
+.contact-title > p:last-child {
+    color: #67717d;
+    margin-top: 4px;
+}
+
+.phone {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.whatsapp-circle {
+    width: 58px;
+    height: 58px;
+    border: 5px solid var(--green);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--green);
+    font-size: 27px;
+}
+
+.phone span,
+.phone strong,
+.phone small {
+    display: block;
+}
+
+.phone span {
+    font-size: 11px;
+    font-weight: 800;
+}
+
+.phone strong {
+    font-size: 23px;
+    margin: 3px 0 7px;
+}
+
+.phone small {
+    color: #505b66;
+}
+
+/* =====================================================
+   FOOTER - AJUSTADO
+===================================================== */
+
+.footer {
+    background: linear-gradient(
+        90deg,
+        #08003c 0%,
+        #00111e 100%
+    );
+
+    color: #ffffff;
+    padding: 24px 0;
+}
+
+
+/* GRID PRINCIPAL */
+
+.footer-content {
+    min-height: 115px;
+
+    display: grid;
+
+    /* Logo | Centro | Redes | Slogan */
+    grid-template-columns: 300px 1fr 150px 220px;
+
+    align-items: center;
+
+    column-gap: 35px;
+}
+
+
+/* =====================================================
+   LOGO
+===================================================== */
+
+.footer-logo {
+    height: 95px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding-right: 35px;
+
+    border-right: 1px solid rgba(255,255,255,0.22);
+}
+
+.footer-logo img {
+    /* aumentado */
+    width: 200;
+    height: 160px;
+
+    object-fit: contain;
+    object-position: center;
+}
+
+
+/* =====================================================
+   CONTEÚDO CENTRAL
+===================================================== */
+
+.footer-center {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    /* CENTRALIZA ESTA PARTE */
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+}
+
+
+/* MENU */
+
+.footer-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 16px;
+
+    margin: 0 0 9px 0;
+
+    white-space: nowrap;
+}
+
+.footer-menu a {
+    color: #ffffff;
+
+    font-size: 13px;
+    font-weight: 500;
+
+    transition: color 0.2s ease;
+}
+
+.footer-menu a:hover {
+    color: #ffbd17;
+}
+
+.footer-menu span {
+    color: #ffbd17;
+
+    font-size: 12px;
+}
+
+
+/* DESCRIÇÃO */
+
+.footer-center p {
+    margin: 0;
+
+    color: rgba(255,255,255,0.88);
+
+    font-size: 12px;
+    line-height: 1.5;
+
+    text-align: center;
+}
+
+
+/* =====================================================
+   INSTAGRAM + LINKEDIN
+===================================================== */
+
+.footer-social {
+    height: 95px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 22px;
+
+    padding: 0 25px;
+
+    border-left: 1px solid rgba(255,255,255,0.22);
+    border-right: 1px solid rgba(255,255,255,0.22);
+}
+
+
+.social-link {
+    width: 36px;
+    height: 36px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #ffffff;
+
+    transition:
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.social-link:hover {
+    color: #ffbd17;
+    transform: translateY(-2px);
+}
+
+
+.social-link svg {
+    width: 28px;
+    height: 28px;
+
+    fill: none;
+
+    stroke: currentColor;
+
+    stroke-width: 1.8;
+
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+
+.social-link .linkedin-fill {
+    fill: currentColor;
+    stroke: none;
+}
+
+
+/* =====================================================
+   SLOGAN
+===================================================== */
+
+.footer-slogan {
+    height: 95px;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: flex-start;
+
+    padding-left: 5px;
+}
+
+
+.footer-slogan p {
+    margin: 0;
+
+    color: #ffffff;
+
+    font-size: 13px;
+
+    line-height: 1.65;
+}
+
+
+.footer-yellow-line {
+    display: block;
+
+    width: 28px;
+    height: 3px;
+
+    margin-top: 12px;
+
+    background: #ffbd17;
+}
+
+
+/* =====================================================
+   RESPONSIVIDADE
+===================================================== */
+
+@media (max-width: 1100px) {
+
+    .footer-content {
+        grid-template-columns: 250px 1fr 130px;
+    }
+
+    .footer-slogan {
+        display: none;
+    }
+
+    .footer-logo img {
+        width: 240px;
+    }
+}
+
+
+@media (max-width: 800px) {
+
+    .footer {
+        padding: 30px 0;
+    }
+
+    .footer-content {
+        display: flex;
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 22px;
+
+        text-align: center;
+    }
+
+    .footer-logo {
+        width: 100%;
+        height: auto;
+
+        padding: 0 0 20px;
+
+        border-right: none;
+        border-bottom: 1px solid rgba(255,255,255,0.20);
+    }
+
+    .footer-logo img {
+        width: 300px;
+        height: auto;
+    }
+
+    .footer-center {
+        align-items: center;
+    }
+
+    .footer-menu {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .footer-social {
+        width: 100%;
+        height: auto;
+
+        padding: 18px 0;
+
+        border-left: none;
+        border-right: none;
+
+        border-top: 1px solid rgba(255,255,255,0.20);
+        border-bottom: 1px solid rgba(255,255,255,0.20);
+    }
+
+    .footer-slogan {
+        display: flex;
+
+        height: auto;
+
+        align-items: center;
+
+        padding: 0;
+
+        text-align: center;
+    }
+}
+
+
+/* =====================================================
+   RESPONSIVIDADE
+===================================================== */
+
+@media (max-width: 1100px) {
+
+    .menu {
+        display: none;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-image {
+        min-height: 480px;
+    }
+
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .why {
+        grid-template-columns: 1fr;
+    }
+
+    .why-image {
+        min-height: 250px;
+    }
+
+    .contact-content {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+@media (max-width: 700px) {
+
+    .header {
+        height: auto;
+        padding: 15px 0;
+    }
+
+    .logo img {
+        width: 190px;
+    }
+
+    .btn-header {
+        font-size: 11px;
+        padding: 0 14px;
+    }
+
+    .hero-content {
+        width: 90%;
+        padding: 50px 0;
+        margin: auto;
+    }
+
+    .hero h1 span {
+        font-size: 70px;
+    }
+
+    .hero-description {
+        font-size: 17px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .hero-benefits {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .benefit {
+        border: none;
+        padding: 0;
+    }
+
+    .section-top {
+        display: block;
+    }
+
+    .section-description {
+        margin-top: 20px;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .why-content {
+        grid-template-columns: 1fr;
+        padding: 40px 6%;
+    }
+
+    .why-grid {
+        border-left: 0;
+        margin-top: 25px;
+        grid-template-columns: 1fr;
+    }
+
+    .why-item {
+        padding-left: 0;
+    }
+
+    .contact-title h2 {
+        font-size: 31px;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-logo,
+    .social {
+        border: none;
+    }
+}
