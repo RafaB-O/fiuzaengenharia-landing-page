@@ -340,12 +340,12 @@ img {
 
 .hero-message {
     position: absolute;
-    right: 40px;
-    bottom: 85px;
+    right: 490px;
+    bottom: 120px;
     text-align: right;
     font-family: cursive;
     font-style: italic;
-    font-size: 36px;
+    font-size: 32px;
     line-height: 1;
     transform: rotate(-7deg);
 }
@@ -958,7 +958,7 @@ img {
 
     .header {
         height: auto;
-        padding: 15px 0;
+        padding: 10px 0;
     }
 
     .logo img {
